@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.view.View.OnClickListener;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, OnClickListener {
 
@@ -59,7 +60,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
 
     @Override
-    public  void onClick(View v){
+    public void onClick(View v) {
+
         //Get Resources for radio buttons, text boxes, and labels
         btnFah = (RadioButton) findViewById(R.id.btnDegF);
         btnCel = (RadioButton) findViewById(R.id.btnDegC);
@@ -93,6 +95,16 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             lblOutputDegK.setText(temp+" degrees K");
         }
 
+    }
+
+    //TOAST METHODS//
+    private void displayToast( double temperature) {
+        if(temperature>50)
+            Toast.makeText(this, "Wow it's hot outside!", Toast.LENGTH_LONG).show();
+        else if(temperature>20)
+            Toast.makeText(this, "Nice weather we are having", Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(this, "Brrrrr - it's cold out!", Toast.LENGTH_LONG).show();
     }
 
     @Override
