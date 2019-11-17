@@ -37,25 +37,25 @@
 
     <EditText
         android:id="@+id/textBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Editable Text"
+        android:layout_width="125dp"
+        android:layout_height="41dp"
+        android:text="Enter temp here"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311"
-        app:layout_constraintRight_toRightOf="2"
         app:layout_constraintLeft_toLeftOf="2"
-        tools:layout_editor_absoluteX="60dp" />
+        app:layout_constraintRight_toRightOf="2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264" />
 
     <RadioGroup
         android:id="@+id/tempGroup"
         android:layout_width="100dp"
         android:layout_height="89dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.411">
 
         <RadioButton
             android:id="@+id/btnDegF"
@@ -81,17 +81,56 @@
         android:id="@+id/btnConvert"
         android:layout_width="144dp"
         android:layout_height="48dp"
-        android:onClick="onButtonClick"
+        android:onClick="onClick"
         android:text="@string/convert"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintHorizontal_bias="0.224"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644" />
+        app:layout_constraintVertical_bias="0.582" />
 
+    <TextView
+        android:id="@+id/lblOutputF"
+        android:layout_width="63dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="460dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="168dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
+    <TextView
+        android:id="@+id/lblOutputC"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="463dp"
+        android:layout_marginEnd="226dp"
+        android:layout_marginBottom="167dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblOutputK"
+        android:layout_width="75dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="461dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="172dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

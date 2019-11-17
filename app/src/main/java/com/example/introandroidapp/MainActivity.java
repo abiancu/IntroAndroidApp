@@ -14,8 +14,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.view.View.OnClickListener;
 
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, OnClickListener {
+
+    //Declare variables
+    private RadioButton btnFah;
+    private RadioButton btnCel;
+    private RadioButton btnKel ;
+    private EditText txtInputTemp;
+    private TextView lblOutputDegF;
+    private TextView lblOutputDegC;
+    private TextView lblOutputDegK;
+    private Button btnConvert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +52,49 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         RadioGroup tempGroup = findViewById(R.id.tempGroup);
         tempGroup.setOnCheckedChangeListener(this);
 
+        btnConvert = findViewById(R.id.btnConvert);
+        btnConvert.setOnClickListener(this);
+
     }
 
-    public void onButtonClick (View v){
-        Intent myIntent = new Intent(getBaseContext(), spinnerEx.class);
-        startActivity(myIntent);
+
+    @Override
+    public  void onClick(View v){
+        //Get Resources for radio buttons, text boxes, and labels
+        btnFah = (RadioButton) findViewById(R.id.btnDegF);
+        btnCel = (RadioButton) findViewById(R.id.btnDegC);
+        btnKel = (RadioButton) findViewById(R.id.btnDegK);
+        txtInputTemp = (EditText) findViewById(R.id.textBox);
+        lblOutputDegF = (TextView) findViewById(R.id.lblOutputF);
+        lblOutputDegC = (TextView) findViewById(R.id.lblOutputC);
+        lblOutputDegK = (TextView) findViewById(R.id.lblOutputK);
+        //Convert the input temperature to double
+        double temp = Double.parseDouble(String.valueOf(txtInputTemp.getText()));
+        double answer=0;
+
+        //If the user choose Fahrenheit, convert to Celsius and Kelvin and display in those text boxes
+        if(btnFah.isChecked()) {
+            lblOutputDegF.setText(temp+" degrees F");
+            lblOutputDegC.setText((Math.round((temp-32)*5/9*100.0)/100.0)+" degrees C");
+            lblOutputDegK.setText((Math.round((temp+459.67)*5/9*100.0)/100.0)+" degrees K");
+        }
+
+        //If the user choose Celsius, convert to Fahrenheit and Kelvin and display in those text boxes
+        if(btnCel.isChecked()) {
+            lblOutputDegF.setText((Math.round(((temp*9)/5+32)*100.0)/100.0)+" degrees F");
+            lblOutputDegC.setText(temp+" degrees C");
+            lblOutputDegK.setText((Math.round((temp+273.15)*100.0)/100.0)+" degrees K");
+        }
+
+        //If the user choose Kelvin, convert to Fahrenheit and Celsius and display in those text boxes
+        if(btnKel.isChecked()) {
+            lblOutputDegF.setText((Math.round((temp*9/5-459.67)*100.0)/100.0)+" degrees F");
+            lblOutputDegC.setText((Math.round((temp-273.15)*100.0)/100.0)+" degrees C");
+            lblOutputDegK.setText(temp+" degrees K");
+        }
+
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -81,5 +132,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 break;
         }
     }
+
 
 }
