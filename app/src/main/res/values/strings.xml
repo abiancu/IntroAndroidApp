@@ -11,9 +11,5 @@
     <string name="convert">Convert</string>
     <string name="hint">Type Here</string>
     <string name="enterTemp">Please enter the temperature and select the correct units then press Convert:</string>
-    <string-array name="myOptions">
-        <item>First option</item>
-        <item>Second option</item>
-        <item>Third option</item>
-    </string-array>
+
 </resources>
