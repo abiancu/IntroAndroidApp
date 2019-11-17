@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             lblOutputDegF.setText(temp+" degrees F");
             lblOutputDegC.setText((Math.round((temp-32)*5/9*100.0)/100.0)+" degrees C");
             lblOutputDegK.setText((Math.round((temp+459.67)*5/9*100.0)/100.0)+" degrees K");
+            answer = (temp-32)*5/9;
         }
 
         //If the user choose Celsius, convert to Fahrenheit and Kelvin and display in those text boxes
@@ -86,6 +87,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             lblOutputDegF.setText((Math.round(((temp*9)/5+32)*100.0)/100.0)+" degrees F");
             lblOutputDegC.setText(temp+" degrees C");
             lblOutputDegK.setText((Math.round((temp+273.15)*100.0)/100.0)+" degrees K");
+
+            answer = temp;
         }
 
         //If the user choose Kelvin, convert to Fahrenheit and Celsius and display in those text boxes
@@ -93,7 +96,13 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             lblOutputDegF.setText((Math.round((temp*9/5-459.67)*100.0)/100.0)+" degrees F");
             lblOutputDegC.setText((Math.round((temp-273.15)*100.0)/100.0)+" degrees C");
             lblOutputDegK.setText(temp+" degrees K");
+
+            answer = temp-273.15;
+
         }
+
+        //call the toast method
+        displayToast(answer);
 
     }
 
