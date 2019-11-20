@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">IntroAndroidApp</string>
+    <string name="app_name">My WeatherApp</string>
     <string name="action_settings">Settings</string>
     <string name="degFah">Degrees Fahrenheit</string>
     <string name="degCel">Degrees Celsius</string>
