@@ -8,4 +8,12 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/mnuMain"
+        android:title="@string/mMenu"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/mnuExit"
+        android:title="@string/mExit"
+        app:showAsAction="never" />
 </menu>

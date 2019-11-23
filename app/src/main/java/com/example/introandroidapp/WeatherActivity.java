@@ -1,5 +1,7 @@
 package com.example.introandroidapp;
 
+
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -127,14 +129,22 @@ public class WeatherActivity extends AppCompatActivity implements RadioGroup.OnC
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+            switch (item.getItemId()) {
+                case R.id.mnuMain:
+                    startActivity(new Intent(getApplicationContext(), MainMenuActivity.class));
+                    return true;
+                case R.id.mnuExit:
+                    finish();
+                default:
+                    return super.onOptionsItemSelected(item);
+            }
     }
 
     @Override
@@ -152,6 +162,5 @@ public class WeatherActivity extends AppCompatActivity implements RadioGroup.OnC
                 break;
         }
     }
-
 
 }

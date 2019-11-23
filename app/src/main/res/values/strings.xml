@@ -19,6 +19,8 @@
     <string name="goMusic">Favorite\nSong</string>
     <string name="goTakePic">Take\nPicture</string>
     <string name="goDraw">My\nDrawing</string>
+    <string name="mExit">Exit</string>
+    <string name="mMenu">Main Menu</string>
 
 
 </resources>
