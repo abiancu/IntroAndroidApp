@@ -21,6 +21,8 @@
     <string name="goDraw">My\nDrawing</string>
     <string name="mExit">Exit</string>
     <string name="mMenu">Main Menu</string>
+    <string name="title_activity_my_drawing">MyDrawing</string>
+
 
 
 </resources>

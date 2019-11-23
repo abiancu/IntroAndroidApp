@@ -40,6 +40,15 @@ public class WeatherActivity extends AppCompatActivity implements RadioGroup.OnC
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+//        //to call the myDrawing activity
+//        Button btnConvertToPic = findViewById(R.id.btnConvert);
+//        btnConvertToPic.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v){
+//                goToColdPic();
+//            }
+//        });
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +65,7 @@ public class WeatherActivity extends AppCompatActivity implements RadioGroup.OnC
 
         btnConvert = findViewById(R.id.btnConvert);
         btnConvert.setOnClickListener(this);
+//        btnConvertToPic.setOnClickListener(this);
 
     }
 
@@ -104,6 +114,8 @@ public class WeatherActivity extends AppCompatActivity implements RadioGroup.OnC
 
         //call the toast method
         displayToast(answer);
+        goToColdPic();
+
 
     }
 
@@ -161,6 +173,11 @@ public class WeatherActivity extends AppCompatActivity implements RadioGroup.OnC
                 lblOutput.setText("You chose Kelvin");
                 break;
         }
+    }
+
+    private void goToColdPic(){
+        Intent intent = new Intent(WeatherActivity.this, MyDrawing.class);
+        this.startActivity(intent);
     }
 
 }
