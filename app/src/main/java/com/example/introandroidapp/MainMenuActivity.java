@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -50,6 +51,28 @@ public class MainMenuActivity extends AppCompatActivity {
         this.startActivity(intent);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+
+        switch (item.getItemId()) {
+            case R.id.mnuMain:
+                startActivity(new Intent(getApplicationContext(), MainMenuActivity.class));
+                return true;
+            case R.id.mnuExit:
+                finish();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
 
 }
