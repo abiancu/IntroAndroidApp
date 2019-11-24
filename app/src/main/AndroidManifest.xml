@@ -15,7 +15,7 @@
         <activity
             android:name=".MyDrawing"
             android:label="@string/title_activity_my_drawing"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".WeatherActivity"
             android:label="@string/title_activity_main_menu"

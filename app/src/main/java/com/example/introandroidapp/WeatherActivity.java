@@ -23,16 +23,6 @@ import android.widget.Toast;
 
 public class WeatherActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, OnClickListener {
 
-    //Declare variables
-    private RadioButton btnFah;
-    private RadioButton btnCel;
-    private RadioButton btnKel ;
-    private EditText txtInputTemp;
-    private TextView lblOutputDegF;
-    private TextView lblOutputDegC;
-    private TextView lblOutputDegK;
-    private Button btnConvert;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +53,7 @@ public class WeatherActivity extends AppCompatActivity implements RadioGroup.OnC
         RadioGroup tempGroup = findViewById(R.id.tempGroup);
         tempGroup.setOnCheckedChangeListener(this);
 
-        btnConvert = findViewById(R.id.btnConvert);
+        Button btnConvert = findViewById(R.id.btnConvert);
         btnConvert.setOnClickListener(this);
 //        btnConvertToPic.setOnClickListener(this);
 
@@ -74,13 +64,14 @@ public class WeatherActivity extends AppCompatActivity implements RadioGroup.OnC
     public void onClick(View v) {
 
         //Get Resources for radio buttons, text boxes, and labels
-        btnFah = (RadioButton) findViewById(R.id.btnDegF);
-        btnCel = (RadioButton) findViewById(R.id.btnDegC);
-        btnKel = (RadioButton) findViewById(R.id.btnDegK);
-        txtInputTemp = (EditText) findViewById(R.id.textBox);
-        lblOutputDegF = (TextView) findViewById(R.id.lblOutputF);
-        lblOutputDegC = (TextView) findViewById(R.id.lblOutputC);
-        lblOutputDegK = (TextView) findViewById(R.id.lblOutputK);
+        //Declare variables
+        RadioButton btnFah = (RadioButton) findViewById(R.id.btnDegF);
+        RadioButton btnCel = (RadioButton) findViewById(R.id.btnDegC);
+        RadioButton btnKel = (RadioButton) findViewById(R.id.btnDegK);
+        EditText txtInputTemp = (EditText) findViewById(R.id.textBox);
+        TextView lblOutputDegF = (TextView) findViewById(R.id.lblOutputF);
+        TextView lblOutputDegC = (TextView) findViewById(R.id.lblOutputC);
+        TextView lblOutputDegK = (TextView) findViewById(R.id.lblOutputK);
         //Convert the input temperature to double
         double temp = Double.parseDouble(String.valueOf(txtInputTemp.getText()));
         double answer=0;
@@ -136,7 +127,7 @@ public class WeatherActivity extends AppCompatActivity implements RadioGroup.OnC
         return true;
     }
 
-    @Override
+     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
