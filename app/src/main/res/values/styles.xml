@@ -17,4 +17,10 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+<!--    My style -->
+    <style name="Titles">
+        <item name="android:textColor">#C80000</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
 </resources>

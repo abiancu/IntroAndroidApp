@@ -12,7 +12,7 @@
     <string name="hint">Type Here</string>
     <string name="enterTemp">Please enter the temperature and select the correct units then press Convert:</string>
     <string name="title_activity_main_menu">MainMenuActivity</string>
-    <string name="Welcome">Welcome to Your Alejandro\'s App</string>
+    <string name="Welcome">Welcome to Alejandro\'s App</string>
     <string name="goWeather">Convert\nTemp</string>
     <string name="goTicTacToe">Tic Tac Toe</string>
     <string name="goInfo">Info</string>
@@ -22,6 +22,12 @@
     <string name="mExit">Exit</string>
     <string name="mMenu">Main Menu</string>
     <string name="title_activity_my_drawing">MyDrawing</string>
+<!--    Adding an array of themes -->
+    <string-array name="mythemes">
+        <item>Material-Light</item>
+        <item>Alejandro-Theme</item>
+    </string-array>
+    <string name="themeOption">Chose your theme</string>
 
 
 
