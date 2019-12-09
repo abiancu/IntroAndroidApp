@@ -77,13 +77,13 @@
         <item name="android:background">@color/actionbar_bg_wh</item>
         <item name="background">@color/actionbar_bg_wh</item>
     </style>
-    
-<!--    FOR TIC-TAC-TOE -->
+
+    <!--    FOR TIC-TAC-TOE -->
     <style name="TextView">
         <item name="android:textSize">40sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/title</item>
     </style>
-    
-    
+
+
 </resources>

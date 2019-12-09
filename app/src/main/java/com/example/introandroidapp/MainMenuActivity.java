@@ -41,6 +41,14 @@ public class MainMenuActivity extends AppCompatActivity {
             }
         });
 
+        Button btnInfo = findViewById(R.id.btnInfo);
+        btnInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToInfo();
+            }
+        });
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +68,11 @@ public class MainMenuActivity extends AppCompatActivity {
 
     private void goTicTacToe(){
         Intent intent = new Intent(MainMenuActivity.this, TicTacToeActivity.class);
+        this.startActivity(intent);
+    }
+
+    private void goToInfo(){
+        Intent intent = new Intent(MainMenuActivity.this, InformationPageActivity.class);
         this.startActivity(intent);
     }
 
