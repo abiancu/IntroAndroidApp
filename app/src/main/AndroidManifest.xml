@@ -12,9 +12,13 @@
         android:supportsRtl="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".InformationResultActivity"
+            android:label="@string/title_activity_information_result"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".InformationPageActivity"
             android:label="@string/title_activity_spinner"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TicTacToeActivity"
             android:label="@string/title_activity_tic_tac_toe"

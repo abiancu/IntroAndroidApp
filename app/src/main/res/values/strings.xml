@@ -21,6 +21,10 @@
     <string name="goDraw">My\nDrawing</string>
     <string name="mExit">Exit</string>
     <string name="mMenu">Main Menu</string>
+    <string name="seasonResult">Your favorite season is </string>
+    <string name="seasonTemp">Your favorite temperature is </string>
+    <string name="allResultYes">Sorry for your allergies</string>
+    <string name="allResultNO">You don\'t have allergies</string>
     <string name="title_activity_my_drawing">MyDrawing</string>
     <!--    Adding an array of themes -->
     <string-array name="mythemes">
@@ -35,10 +39,10 @@
     <string name="title_activity_spinner">Spinner</string>
 
 
-    <string  name="informationTitle">Your Information</string>
-    <string  name="favSeason">What is your favorite season?</string>
-    <string  name="favTemp">What is your favorite temperature?</string>
-    <string  name="allergies">Do you have any allergies?</string>
+    <string name="informationTitle">Your Information</string>
+    <string name="favSeason">What is your favorite season?</string>
+    <string name="favTemp">What is your favorite temperature?</string>
+    <string name="allergies">Do you have any allergies?</string>
 
     <!-- Options for the SPINNERS -->
     <string-array name="seasons">
@@ -47,5 +51,6 @@
         <item>Winter</item>
         <item>Spring</item>
     </string-array>
+    <string name="title_activity_information_result">InformationResultActivity</string>
 
 </resources>
