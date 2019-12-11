@@ -1,5 +1,6 @@
 package com.example.introandroidapp;
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -9,8 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 public class SongActivity extends AppCompatActivity {
+
+    private VideoView vidView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +32,18 @@ public class SongActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        vidView = findViewById(R.id.vidView);
+        vidView.setMediaController(new MediaController(this)); // this adds the media controller
+        Uri video = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.samplesong);
+        vidView.setVideoURI(video);
+        vidView.setZOrderOnTop(true); //don't merge video with other widgets
+
+
     }
 
+    protected void onPause(){
+        vidView.stopPlayback();
+        super.onPause();
+    }
 }

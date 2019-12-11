@@ -57,15 +57,6 @@ public class MainMenuActivity extends AppCompatActivity {
             }
         });
 
-        Button btnTakePic =  findViewById(R.id.btnTakePic);
-        btnTakePic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToTakePic();
-            }
-        });
-
-
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -98,10 +89,7 @@ public class MainMenuActivity extends AppCompatActivity {
         this.startActivity(intent);
     }
 
-    private void goToTakePic(){
-        Intent intent = new Intent(MainMenuActivity.this, TakePictureActivity.class);
-        this.startActivity(intent);
-    }
+
 
 
 
@@ -127,6 +115,4 @@ public class MainMenuActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
 }

@@ -12,13 +12,12 @@
         android:supportsRtl="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".TakePictureActivity"
-            android:label="@string/title_activity_take_picture"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
             android:name=".SongActivity"
             android:label="@string/title_activity_song"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+<!--            android:screenOrientation="landscape"/>--> //don't like the landspace mode
+
         <activity
             android:name=".InformationResultActivity"
             android:label="@string/title_activity_information_result"
