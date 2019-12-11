@@ -12,9 +12,17 @@
         android:supportsRtl="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".TakePictureActivity"
+            android:label="@string/title_activity_take_picture"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".SongActivity"
+            android:label="@string/title_activity_song"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".InformationResultActivity"
             android:label="@string/title_activity_information_result"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".InformationPageActivity"
             android:label="@string/title_activity_spinner"

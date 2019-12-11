@@ -52,5 +52,7 @@
         <item>Spring</item>
     </string-array>
     <string name="title_activity_information_result">InformationResultActivity</string>
+    <string name="title_activity_song">SongActivity</string>
+    <string name="title_activity_take_picture">TakePictureActivity</string>
 
 </resources>
