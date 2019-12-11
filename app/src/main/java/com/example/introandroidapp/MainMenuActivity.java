@@ -49,6 +49,23 @@ public class MainMenuActivity extends AppCompatActivity {
             }
         });
 
+        Button btnSong =  findViewById(R.id.btnSong);
+        btnSong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToSong();
+            }
+        });
+
+        Button btnTakePic =  findViewById(R.id.btnTakePic);
+        btnTakePic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToTakePic();
+            }
+        });
+
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +92,18 @@ public class MainMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MainMenuActivity.this, InformationPageActivity.class);
         this.startActivity(intent);
     }
+
+    private void goToSong(){
+        Intent intent = new Intent(MainMenuActivity.this, SongActivity.class);
+        this.startActivity(intent);
+    }
+
+    private void goToTakePic(){
+        Intent intent = new Intent(MainMenuActivity.this, TakePictureActivity.class);
+        this.startActivity(intent);
+    }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
